@@ -1,0 +1,342 @@
+.message {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 300px; /* adjust as needed */
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;;
+    align-items: center;
+    background: #a2def1;
+    position: relative;
+}
+body:before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: #fff;
+}
+
+.forest {
+    position: absolute;
+    left: 15%;
+    transform: translateX(-50%);
+    bottom: 200px; /* matches body:before height */
+    width: 100px;
+    z-index: 1;
+}
+
+.hike
+{
+    position: absolute;
+    left : 30%;
+    transform: translateX(-50%) translateY(200%);
+    width: 100px;
+    height: 100px;
+    background-image: url('images/Table.png');
+    background-size: cover;
+    background-position: center;
+} 
+
+.gift .box
+{
+    position: absolute;
+    left: 70%;
+    transform: translateX(-50%) translateY(180%) scale(0.6);
+    width: 100px;
+    height: 100px;
+    background-image: url('images/box.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+.gift .ticket {
+    position: absolute;
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%) translateY(130%) scale(0.4);
+    background-image: url('images/Ticket.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    animation: ticket-out 0.8s infinite alternate;
+    transform-origin: bottom center;
+
+}
+@keyframes ticket-out {
+    100% {
+        transform: translateX(11%) translateY(105%) scale(0.6) rotate(-25deg);
+    }
+    50% {
+        transform: translateX(-50%) translateY(130%) scale(0.4) rotate(0deg);
+    }
+}
+.gift .lid
+{
+    position: absolute;
+    left: 70%;
+        /* transform handled by animation */
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%) translateY(170%) scale(0.6);
+    background-image: url('images/lid.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    animation: lid-tilt 0.8s infinite alternate;
+    transform-origin: bottom center;
+
+}
+
+@keyframes lid-tilt {
+    0% {
+        transform: translateX(-50%) translateY(110%) scale(0.6) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-60%) translateY(115%) scale(0.6) rotate(-30deg);
+    }
+}
+
+
+.gift .ball
+{
+    position: absolute;
+    top: 85vh;
+    left: 90vw;
+        /* transform handled by animation */
+    width: 100px;
+    height: 100px;
+    transform: translateX(0vw) scale(0.6);
+    background-image: url('images/ball.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;
+    animation: ball-roll 5s infinite alternate;
+    transform-origin: center center;
+    overflow:hidden;
+
+}
+@keyframes ball-roll {
+    0% {
+        transform: translateX(0vw) scale(0.6) rotate(0deg);
+    }
+    90%{
+        opacity:1;
+    }
+    100% {
+        transform: translateX(-50vw) scale(0.6) rotate(-688deg);
+    }
+}
+
+.tree
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+.tree:before
+{
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.1)
+}
+.tree:after
+{
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 40px;
+    background: #734500;
+} 
+ /* .tree .my-tree-svg {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto 0 auto; } */
+.tree div
+{
+    position: absolute;
+    width:100%;
+    height: 200px;
+    bottom: 0;
+    display:flex;
+}
+
+.tree div span
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+.tree div:nth-child(2)
+{   
+    transform: translateY(-100px) scale(0.8);
+    z-index: 1;
+}
+.tree div:nth-child(3)
+{
+    transform: translateY(-175px) scale(0.6);
+    z-index: 1;
+}
+.tree div:nth-child(4)
+{
+    transform: translateY(-240px) scale(0.4);
+    z-index: 1;
+}
+.tree div:nth-child(5)
+{
+    transform: translateY(-280px) scale(0.2);
+    z-index: 1;
+}
+.tree div span:nth-child(1):before
+{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:200%;
+    height:100%;
+    background: linear-gradient(#00b300,#0f0);
+    border-top-left-radius: 110% 100%;
+    border-top-right-radius: 0% 100%;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}
+.tree div span:nth-child(2):before
+{
+    content: '';
+    position: absolute;
+    top:0;
+    left:-100%;
+    width:200%;
+    height:100%;
+    background: linear-gradient(#00b300,#0f0);
+    border-top-left-radius: 0% 100%;
+    border-top-right-radius: 110% 100%;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}
+
+
+.snow
+{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+}
+
+.snow .snow1
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: url('images/snow.png');
+    z-index: 1000;
+    mix-blend-mode: screen;
+    animation: animate 2s linear infinite;
+    transform: scale (2);
+}
+
+.snow .snow2
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: url('images/snow.png');
+    z-index: 1000;
+    mix-blend-mode: screen;
+    animation: animate 5s linear infinite;
+    transform: scale(1);
+    filter: blur(1px);
+}
+
+.snow .snow3
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: url('images/snow.png');
+    z-index: 1000;
+    mix-blend-mode: screen;
+    animation: animate 7s linear infinite;
+    transform: scale(1.5);
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0 0;
+    }
+    100%
+    {
+        background-position: 0% 506px;
+    }
+}
+
+.message .greeting {
+    position: static;
+    font-family: 'Eaton', cursive, 'Comic Sans MS', sans-serif;
+    font-size: 1rem;
+    color: #0e0063;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.message .wishes {
+    position: static;
+    font-family: 'Eaton', cursive, 'Comic Sans MS', sans-serif;
+    font-size: 1rem;
+    margin-top: 12px;
+    color: #0e0063;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.message .body {
+    position: static;
+    font-family: 'Eaton', cursive, 'Comic Sans MS', sans-serif;
+    font-size: 1rem;
+        margin-top: 12px;
+    color: #0e0063;
+    text-align: left;
+    letter-spacing: 2px;
+}
