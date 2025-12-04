@@ -60,7 +60,7 @@ button.lights-on::before
     right: -14px;
     width: 35px;
     height: 35px;
-    background-image: url('/Christmas-Card/images/little-hat.png');
+    background-image: url('./images/little-hat.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -93,7 +93,7 @@ button.lights-on::before
     transform: translateX(-50%) translateY(200%) scale(1.5);
     width: 100px;
     height: 100px;
-    background-image: url('/Christmas-Card/images/Table.png');
+    background-image: url('./images/Table.png');
     background-size: cover;
     background-position: center;
 } 
@@ -105,7 +105,7 @@ button.lights-on::before
     transform: translateX(-50%) translateY(180%) scale(0.6);
     width: 100px;
     height: 100px;
-    background-image: url('/Christmas-Card/images/box.png');
+    background-image: url('./images/box.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -117,7 +117,7 @@ button.lights-on::before
     width: 100px;
     height: 100px;
     transform: translateX(-50%) translateY(130%) scale(0.4);
-    background-image: url('/Christmas-Card/images/Ticket.png');
+    background-image: url('./images/Ticket.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -142,7 +142,7 @@ button.lights-on::before
     width: 100px;
     height: 100px;
     transform: translateX(-50%) translateY(170%) scale(0.6);
-    background-image: url('/Christmas-Card/images/lid.png');
+    background-image: url('./images/lid.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -171,7 +171,7 @@ button.lights-on::before
     width: 100px;
     height: 100px;
     transform: translateX(0vw) scale(0.6);
-    background-image: url('/Christmas-Card/images/ball.png');
+    background-image: url('./images/ball.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -310,7 +310,7 @@ button.lights-on::before
     left:0;
     width:100%;
     height:100%;
-    background: url('/Christmas-Card/images/snow.png');
+    background: url('./images/snow.png');
     z-index: 1000;
     mix-blend-mode: screen;
     animation: animate 2s linear infinite;
@@ -324,7 +324,7 @@ button.lights-on::before
     left:0;
     width:100%;
     height:100%;
-    background: url('/Christmas-Card/images/snow.png');
+    background: url('./images/snow.png');
     z-index: 1000;
     mix-blend-mode: screen;
     animation: animate 5s linear infinite;
@@ -339,7 +339,7 @@ button.lights-on::before
     left:0;
     width:100%;
     height:100%;
-    background: url('/Christmas-Card/images/snow.png');
+    background: url('./images/snow.png');
     z-index: 1000;
     mix-blend-mode: screen;
     animation: animate 7s linear infinite;
@@ -394,7 +394,7 @@ button.lights-on::before
     transform: translate(-50%, -50%) scale(0.82);
     width: 400px;
     height: 400px;
-    background-image: url('/Christmas-Card/images/lights-off2.png');
+    background-image: url('./images/lights-off2.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -406,5 +406,5 @@ button.lights-on::before
 
 .tree .lights.lights-on
 {
-    background-image: url('/Christmas-Card/images/lights-on2.png');
+    background-image: url('./images/lights-on2.png');
 }
