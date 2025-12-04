@@ -92,8 +92,8 @@
     
     // Array of available songs (null represents no music)
     const songs = [
-        'images/christmas-background-439998.mp3',
-        'images/soft-christmas-piano-438153.mp3',
+        '/Christmas-Card/images/christmas-background-439998.mp3',
+        '/Christmas-Card/images/soft-christmas-piano-438153.mp3',
         null // No music option
     ];
     let currentSongIndex = 0;
@@ -101,8 +101,11 @@
     // Start playing a song after 3 seconds
     setTimeout(function() {
         bgMusic.src = songs[currentSongIndex];
-        bgMusic.currentTime = 10; // Skip first 10 seconds
-        bgMusic.play();
+        bgMusic.oncanplay = function() {
+            bgMusic.currentTime = 10; // Skip first 10 seconds
+            bgMusic.play();
+        };
+        bgMusic.load();
     }, 3000);
 
     button.addEventListener('click', function() {
@@ -117,8 +120,11 @@
         } else {
             // Play selected song
             bgMusic.src = songs[currentSongIndex];
-            bgMusic.currentTime = 10; // Skip first 10 seconds for all songs
-            bgMusic.play();
+            bgMusic.oncanplay = function() {
+                bgMusic.currentTime = 10; // Skip first 10 seconds for all songs
+                bgMusic.play();
+            };
+            bgMusic.load();
         }
     });
 </script>
