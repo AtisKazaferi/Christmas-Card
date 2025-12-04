@@ -60,6 +60,8 @@
             <span> </span>
             <span> </span>
         </div>
+        <span class="lights"></span>
+
     </div>
     <div class="hike">
         <div></div>
@@ -77,6 +79,48 @@
         <div class = "wishes"> Merry Christmas & Happy New Year!</div>
         <div class ="body"> I hope you get your well deserved 2026 World Cup tickets, and I'm wishing you the best of luck hiking your way to a PowerBI expert status in your next assignment!</div>
     </div>
+    <button class="lights-on">Lighten Up!</button>
+    
+    <audio id="bgMusic" loop>
+        <source src="images/christmas-background-439998.mp3" type="audio/mpeg">
+    </audio>
 
+    <script>
+    const button = document.querySelector('.lights-on');
+    const lights = document.querySelector('.tree .lights');
+    const bgMusic = document.getElementById('bgMusic');
+    
+    // Array of available songs (null represents no music)
+    const songs = [
+        'images/christmas-background-439998.mp3',
+        'images/soft-christmas-piano-438153.mp3',
+        null // No music option
+    ];
+    let currentSongIndex = 0;
+
+    // Start playing a song after 3 seconds
+    setTimeout(function() {
+        bgMusic.src = songs[currentSongIndex];
+        bgMusic.currentTime = 10; // Skip first 10 seconds
+        bgMusic.play();
+    }, 3000);
+
+    button.addEventListener('click', function() {
+        lights.classList.toggle('lights-on');
+        
+        // Switch to next song
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        
+        if (songs[currentSongIndex] === null) {
+            // No music option
+            bgMusic.pause();
+        } else {
+            // Play selected song
+            bgMusic.src = songs[currentSongIndex];
+            bgMusic.currentTime = 10; // Skip first 10 seconds for all songs
+            bgMusic.play();
+        }
+    });
+</script>
 </body>
 </html>

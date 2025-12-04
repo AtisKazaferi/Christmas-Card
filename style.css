@@ -32,6 +32,51 @@ body:before
     background: #fff;
 }
 
+.lights-on 
+{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    padding: 12px 28px;
+    background: #0a19ed;
+    color: #fdfdfd;
+    font-family: 'Eaton';
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.785);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 1001;
+    outline: none;
+}
+
+button.lights-on::before
+{
+    content: '';
+    position: absolute;
+    transform: rotate(20deg) scale(1.4);
+    top: -17px;
+    right: -14px;
+    width: 35px;
+    height: 35px;
+    background-image: url('images/little-hat.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lights-on:active {
+    outline: none !important;
+}
+
+.lights-on:hover {
+    background: #6670d7;
+    transform: scale(1.08);
+}
+
+
+
+
 .forest {
     position: absolute;
     left: 15%;
@@ -45,7 +90,7 @@ body:before
 {
     position: absolute;
     left : 30%;
-    transform: translateX(-50%) translateY(200%);
+    transform: translateX(-50%) translateY(200%) scale(1.5);
     width: 100px;
     height: 100px;
     background-image: url('images/Table.png');
@@ -226,7 +271,7 @@ body:before
     left:0;
     width:200%;
     height:100%;
-    background: linear-gradient(#00b300,#0f0);
+    background: linear-gradient(#04ae04,rgb(4, 94, 4));
     border-top-left-radius: 110% 100%;
     border-top-right-radius: 0% 100%;
     border-bottom-left-radius: 50% 20%;
@@ -240,7 +285,7 @@ body:before
     left:-100%;
     width:200%;
     height:100%;
-    background: linear-gradient(#00b300,#0f0);
+    background: linear-gradient(#04ae04,rgb(4, 94, 4));
     border-top-left-radius: 0% 100%;
     border-top-right-radius: 110% 100%;
     border-bottom-left-radius: 50% 20%;
@@ -339,4 +384,27 @@ body:before
     color: #0e0063;
     text-align: left;
     letter-spacing: 2px;
+}
+
+.tree .lights
+{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.82);
+    width: 400px;
+    height: 400px;
+    background-image: url('images/lights-off2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    z-index: 10;
+    transition: background-image 0.3s ease;
+    box-shadow: none;
+}
+
+.tree .lights.lights-on
+{
+    background-image: url('images/lights-on2.png');
 }
