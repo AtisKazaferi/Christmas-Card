@@ -386,6 +386,16 @@ button.lights-on::before
     letter-spacing: 2px;
 }
 
+.message .body2 {
+    position: static;
+    font-family: 'Eaton', cursive, 'Comic Sans MS', sans-serif;
+    font-size: 1rem;
+        margin-top: 12px;
+    color: #0e0063;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
 .tree .lights
 {
     position: absolute;
